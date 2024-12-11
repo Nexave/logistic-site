@@ -1,0 +1,198 @@
+.about-us {
+    margin-top: 75px;
+    margin-bottom: 120px;
+    @include laptop{
+        margin-top: 45px;
+        margin-bottom: 80px;
+    }
+    @include mobile{
+        margin-bottom: 60px;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 60px;
+        @include laptop{
+            margin-bottom: 40px;
+        }
+        @include mobile{
+            margin-bottom: 25px;
+        }
+    }
+
+    .text-paragraph {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+        color: var(--accent3);
+    }
+
+}
+
+.video-page {
+   
+
+    .item {
+        display: block;
+        margin-bottom: 100px;
+
+        @include tablet {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+
+        .img-bg {
+            height: 580px;
+            width: 100%;
+            display: block;
+            margin-bottom: 50px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+
+            @include tablet {
+                margin-bottom: 30px;
+            }
+
+            @include mobile {
+                height: 200px;
+                margin-bottom: 15px;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                width: 158px;
+                height: 96px;
+                background: url(../img/play-btn.svg) no-repeat;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @include mobile {
+                    width: 77px;
+                    height: 77px;
+                    background-size: contain;
+                }
+            }
+        }
+
+    }
+}
+
+.our-company {
+    .title {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 949px;
+        text-align: center;
+    }
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        @include laptop{
+            flex-direction: column;
+        }
+        .left-block{
+            @include laptop{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .img-wrapper{
+                position: relative;
+                width: 353px;
+                height: 353px;
+                padding: 15px;
+                border:1px solid var(--accent10);
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                border-radius: 50%;
+                margin-bottom: 40px;
+
+                @include mobile{
+                    width: 303px;
+                    height: 303px;
+                    padding: 10px;
+                }
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width: 131px;
+                    height: 131px;
+                    background:url("../img/about/reward.jpg");
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                    bottom:0;
+                    right: -50px;
+                    border-radius:50%;
+                    @include mobile{
+                        width: 80px;
+                        height: 80px;
+                        right: 0;
+                    }
+                }
+                img{
+                    border-radius:50%;
+                    @include mobile{
+                    width: 280px ;
+                    height: 280px;
+                    border-radius:50%;
+                }
+                }
+            }
+            .img-desc{
+                max-width: 648px;
+                font-size: 24px;
+                line-height: 34px;
+                font-family: var(--intro);
+                color:var(--accent1);
+                @include laptop{
+                    font-size: 20px;
+                    text-align: center;
+                }
+                @include mobile{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+            }
+
+        }
+        .right-block{
+            margin-left: 17px;
+
+            @include laptop{
+                margin-left: 0;
+                margin-top: 20px;    
+            }
+            @include laptop{
+                width: 100%;
+                height: auto;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+ .fancybox__content{
+        @include mobile{
+            max-width: 90vw !important;
+            // max-height:100% !important;
+            height: auto;
+        }
+    }
+.about-us.partners{
+    @include laptop{
+        margin-bottom: 0;
+    }
+}

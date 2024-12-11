@@ -1,0 +1,84 @@
+.pop-routes {
+    margin-top: 100px;
+    @include laptop {
+        margin-top: 80px;
+    }
+    @include mobile {
+        margin-top: 50px;
+    }
+    &__inner {
+        display: flex;
+        margin-top: 80px;
+        @include laptop {
+            margin-top: 40px;
+        }
+        @include mobile {
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+    }
+    &__column {
+        width: 33.3%;
+        border-right: 1px solid #D4DBDB;
+        @include mobile {
+            width: 100%;
+            border-right: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+        &:first-child {
+            .pop-routes__item {
+                &:first-child {
+                    border-top-left-radius: 30px;
+                    @include mobile {
+                        border-top-right-radius: 30px;
+                    }
+                }
+                &:last-child {
+                    border-bottom-left-radius: 30px;
+                    @include mobile {
+                        border-bottom-left-radius: 0;
+                    }
+                }
+            }
+        }
+        &:last-child {
+            .pop-routes__item {
+                &:first-child {
+                    border-top-right-radius: 30px;
+                    @include mobile {
+                        border-top-right-radius: 0;
+                    }
+                }
+                &:last-child {
+                    border-bottom-right-radius: 30px;
+                    @include mobile {
+                        border-bottom-left-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--accent1);
+        transition: all 0.2s ease;
+        &:nth-child(odd) {
+            background-color: var(--accent11);
+        }
+        &:nth-child(even) {
+            background-color: var(--accent8);
+        }
+        a {
+            &:hover {
+                border-bottom: 1px solid var(--accent1);
+            }
+        }
+
+    }
+}

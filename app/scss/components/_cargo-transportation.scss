@@ -1,0 +1,308 @@
+.main-top {
+
+    &-decor {
+        position: absolute;
+               width: 50vw;
+        height: 780px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        z-index: -1;
+        @include blaptop{
+            height: 658px;
+            width: 48vw;
+        }
+        @media (max-width:  1366px){
+            width: 45vw;
+        }
+        @include laptop{
+            width: 39vw;
+        }
+
+        // @include laptop{
+        //     position:relative;
+        //      width: 90vw;
+        //      height: 1000px;
+
+        // }
+        @include laptop{
+            
+            height: 608px;
+        }
+        @include ipad{
+            position:relative;
+            width: calc(100vw - 20px);
+            height: 608px;
+        }
+        @include mobile{
+            height: 608px;
+            background-size: cover !important;
+            background-position: right !important;
+        }
+        @media (max-width: 544px){
+            height: 250px;
+            width: calc(100vw - 15px);
+        }
+
+    }
+
+    
+
+    &-inner {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        @include ipad{
+            justify-content: center;
+            margin-top: 30px;
+
+        }
+        @include mobile{
+            margin-top: 20px;
+        }
+    }
+
+    .form-block {
+        max-width: 649px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include ipad{
+           
+            max-width: none;
+        }
+    }
+
+    .title {
+        margin-bottom: 60px;
+        text-align: left;
+
+        margin-bottom: 37px;
+        @include blaptop{
+                font-size: 45px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 0;
+    text-align: center;
+        }
+        @include ipad{
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+
+            text-align: center;
+
+        }
+        @include mobile{
+            margin-bottom: 20px;
+
+        }
+    }
+
+    .main-form {
+        .row-block{
+            width: 100%;
+            display: flex;
+            @include ipad{
+                flex-direction: column;
+            }
+            .input-block{
+                width: 100%;
+                max-width: 280px;
+                @include blaptop{
+                    max-width: none;
+                }
+            }
+            .input{
+                width: 100%;
+            }
+            .input-block:first-child{
+                margin-right: 10px;
+            }
+        }
+        .input-block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            position:relative;
+            max-width: 570px;
+            @include blaptop{
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+            @include mobile{
+                margin-bottom: 20px;
+            }
+        }
+
+        .label-title {
+            font-family: var(--helvetica);
+            font-size: 18px;
+            line-height: 18px;
+            color: var(--accent3);
+            margin-bottom: 14px;
+            @include blaptop{
+                margin-bottom: 10px;
+            }
+            @include mobile{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .input {
+            height: 50px;
+            border: var(--accent8);
+            background: var(--accent8);
+            padding-left: 11px;
+            font-size: 18px;
+            line-height: 18px;
+            position:relative;
+
+            @include mobile{
+                height: 40px;
+                font-size: 16px;
+                padding-left: 15px;
+             
+            }
+            &:focus {
+                            outline: 1px solid #BDBEBE;
+                        }
+  
+
+            &::placeholder {
+                color: var(--accent9);
+            }
+        }
+
+        .input-address {
+            position: relative;
+            padding-left: 57px;
+            @include mobile{
+                padding-left: 41px;
+            }
+
+        }
+
+        .label-address {
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 13px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background: url("../img/icons/marker1.svg");
+                left: 26px;
+                bottom: -46px;
+                z-index: 1;
+                 @include mobile{
+               transform:scale(0.8);
+               left:15px;
+               bottom: -39px;
+            }
+            }
+
+        }
+    
+
+    .choices__inner {
+        height: 50px;
+        border: var(--accent8);
+        background-color: var(--accent8);
+        line-height: 35px;
+        padding-left: 15px;
+    }
+    .button{
+        @include mobile{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+}
+
+.choices__list--single {
+    font-size: 18px;
+    padding: 0;
+    @include mobile{
+        font-size: 16px;
+    }
+}
+
+// .choices[data-type*=select-one]:after{
+// 	border-color:red;
+// 	width:5px;
+// 	height: 5px;
+// 	background-color:red
+// }
+.choices[data-type*=select-one]:after {
+    content: '';
+    height: 8px;
+    width: 8px;
+
+    border-left: 2px solid #70A9A1;
+    border-bottom: 2px solid #70A9A1;
+    transform: rotateZ(-45deg);
+    border-radius: 2px;
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    margin-top: -2.5px;
+    pointer-events: none;
+    transition: transform 0.3s ease-in;
+}
+
+.choices[data-type*=select-one].is-open:after {
+    transform: rotateZ(135deg);
+    margin-top: -7.5px;
+    transition: transform 0.3s ease-in;
+}
+
+.choices__list.choices__list--dropdown.is-active {
+    background: #F7FAFA
+}
+
+.choices__item--selectable {
+    font-size: 18px;
+    @include mobile{
+        font-size: 16px;
+    }
+}
+
+}
+
+.main-form.invalid{
+    .pristine-error{
+        display: none;
+    } 
+    .has-danger{
+        .input{
+            border: 1px solid #E07A5F;
+        }
+        .label-title{
+            color:#E07A5F ;
+        }
+    }
+}
+.main-top.partners{
+    @include ipad{
+        display: flex;
+        flex-direction: column-reverse;
+
+
+    }
+    .container{
+        @include ipad{
+        margin-left: 0px;
+        .title{
+            text-align: start;
+        }
+    }
+
+    }
+    
+}

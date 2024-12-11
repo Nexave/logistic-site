@@ -1,0 +1,15 @@
+@import "_mixins/font-face";
+
+// @include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+// @include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+// @include font-face("Mak", "../fonts/Mak/Mak", 500);
+// @include font-face("Mak", "../fonts/MakBold/MakBold", 700);
+// @include font-face("Lato", "../fonts/LatoRegular/LatoRegular", 400);
+// @include font-face("Lato", "../fonts/LatoLight/LatoLight", 300);
+// @include font-face("Lato", "../fonts/LatoMedium/LatoMedium", 500);
+@include font-face("Helvetica", "../fonts/HelveticaBold/HelveticaNeueCyr-Bold", 600);
+@include font-face("Helvetica", "../fonts/HelveticaMedium/HelveticaNeueCyr-Medium", 550);
+@include font-face("Helvetica", "../fonts/HelveticaRoman/HelveticaNeueCyr-Roman", 400);
+@include font-face("OpenSans", "../fonts/OpenSansBold/OpenSans-SemiBold", 600);
+@include font-face("Intro", "../fonts/Intro/Intro", 400);
+@include font-face("Geometria", "../fonts/Geometria/Geometria-ExtraLight", 300);

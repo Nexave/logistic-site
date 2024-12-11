@@ -1,0 +1,116 @@
+.one-truck {
+    margin-top: 129px;
+    margin-bottom: 43px;
+    @include laptop{
+    	margin-top: 130px;
+    }
+    @include mobile{
+    	margin-top: 60px;
+    	margin-bottom: 25px;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 44px;
+        @include mobile{
+        	font-size: 22px;
+        	margin-bottom: 25px;
+        }
+    }
+
+    .one-truck-inner {
+        display: flex;
+        @include laptop{
+        	flex-direction: column-reverse;
+        	align-items:center;
+        }
+        .img-wrapper{
+        	img{
+        		width: 100%;
+        		height: auto;
+        	}
+        }
+
+    }
+
+    .left-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 68px;
+        max-width: 649px;
+        width: 100%;
+        padding-bottom: 27px;
+        @include laptop{
+        	margin-top: 50px;
+        	margin-right: 0;
+        	max-width: 800px;
+        }
+
+        .block-title {
+            font-size: 24px;
+            line-height: 18px;
+            font-family: var(--intro);
+            margin-bottom: 56px;
+            color: var(--accent14);
+            @include laptop{
+            	margin-bottom: 45px;
+                text-align: center;
+
+            }
+            @include mobile{
+            	margin-bottom: 30px;
+                font-size: 18px;
+            }
+        }
+        .row-block{
+        	display: flex;
+        	justify-content: space-between;
+        	flex-wrap: wrap;
+        	@include mobile{
+        		flex-direction: column;
+        	}
+        	.item{
+        		display: flex;
+        		justify-content: space-between;
+        		width: calc(50% - 15px);
+        		margin-bottom: 45px;
+        		@include mobile{
+        			width: 100%;
+        			margin-bottom: 25px;
+        		}
+
+        		
+        	}
+        }
+        .item{
+        	display: flex;
+        	justify-content:space-between;
+        	padding-bottom: 16px;
+        	border-bottom: 1px dashed var(--accent1) ;
+        	&-title{
+        			font-size: 18px;
+					line-height: 18px;
+					color: var(--accent1);
+        		}
+        		&-desc{
+        			font-size: 18px;
+					line-height: 18px;
+					color: var(--accent1);
+					font-weight: 600;
+        		}
+        }
+        .button-wrapper{
+        	margin-top: 40px;
+            @include laptop{
+                display: flex;
+                justify-content: center;
+            }
+            .button{
+                @include mobile{
+                width: 100%;}
+            }
+        }
+
+    }
+}

@@ -1,0 +1,240 @@
+.partners {
+    &__image {
+        width: 100%;
+        height: 515px;
+        object-fit: cover;
+        margin-bottom: 50px;
+
+        &.rounded {
+            border-radius: 15px;
+        }
+    }
+}
+
+.partnership {
+    position: relative;
+    overflow: hidden;
+    height: 955px;
+    background: url(../img/services-decor.png);
+    background-size: cover;
+
+    @include ipad {
+        height: auto;
+
+    }
+    @include mobile{
+        background-position: -470px;
+    }
+
+    &-inner {
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 150px;
+        }
+
+    }
+
+    &-brands {
+        display: flex;
+        flex-wrap: wrap;
+        @include ipad{
+            justify-content: center;
+        }
+
+        &__item {
+            width: 25%;
+            display: flex;
+            justify-content: flex-start;
+
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8) {
+                justify-content: end;
+            }
+
+            @include ipad {
+
+                width: 33%;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    justify-content: center;
+                }
+                &:nth-child(9){
+                    display: none;
+                }
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(10),
+                &:nth-child(11),
+                    {
+                    width: 34%;
+                    justify-content: center;
+
+                }
+                &:nth-child(12){
+                    justify-content: center;
+                    width: 100%;
+                }
+            }
+            @include mobile{
+               
+                &:nth-child(n){
+                    width: 50%;
+                    justify-content: center;
+                    margin-bottom: 23px;
+                     img{
+                        width: 130px;
+                        height: 130px;
+                    }
+                }
+               
+                &:nth-child(3),
+                &:nth-child(6),
+                &:nth-child(10){
+                    width: 54%;
+                    
+                }
+            }
+            // @include ipad {
+            //     width: 33%;
+            //     justify-content: center;
+            //     margin-bottom: 30px;
+            //     &:nth-child(9) {
+            //         display: none;
+            //     }
+            //     &:nth-child(5),
+            //     &:nth-child(6),
+            //     &:nth-child(7),
+            //     &:nth-child(8) {
+            //         justify-content: center;
+            //     }
+            //     &:nth-child(11) {
+            //         width: 45%;
+            //         justify-content: flex-end;
+            //     }
+            //     &:nth-child(12) {
+            //         width: 45%;
+            //         justify-content: center;
+            //     }
+            // }
+            // @include mobile {
+            //     width: 50%;
+            //     &:nth-child(11) {
+            //         width: 50%;
+            //         justify-content: center;
+            //     }
+            //     &:nth-child(12) {
+            //         width: 100%;
+            //         justify-content: center;
+            //     }
+            // }
+            @media (max-width: 500px) {
+                &:nth-child(n){
+                img {
+                    width: 103px;
+                    height: 103px;
+                }
+            }
+            }
+        }
+    }
+}
+
+.become-partner {
+    margin-top: 55px;
+    margin-bottom: 100px;
+    @include mobile{
+        margin-bottom: 50px;
+    }
+
+    .title {
+        max-width: 850px;
+        text-align: center;
+        margin: 0 auto;
+        @include laptop{
+            margin-bottom: 30px;
+        }
+        @include mobile{
+            margin-bottom: 20px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+        @include laptop{
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
+      
+    }
+
+    &__text {
+        margin-right: 30px;
+        width: 50%;
+        @include laptop{
+            margin-right: 0;
+            width: 100%;
+        }
+        &-headline {
+            font-family: var(--intro);
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: 400;
+            color: var(--accent1);
+            margin-bottom: 30px;
+            @include laptop{
+                text-align: center;
+            }
+            @include mobile{
+                font-size: 24px;
+                line-height: 30px;
+
+            }
+        }
+
+        &-content {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 400;
+            margin-bottom: 45px;
+            color: var(--accent3);
+            @include laptop{
+                text-align: center;
+            }
+            @include mobile{
+                font-size: 20px;
+                line-height: 22px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .become-partner__text-btn{
+        @include laptop{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__image {
+        width: 50%;
+        @include laptop{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        @include mobile{
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

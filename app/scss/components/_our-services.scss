@@ -1,0 +1,144 @@
+.our-services{
+	overflow: hidden;
+	margin-top: 207px ;
+
+	position:relative;
+	@include laptop{
+		margin-top: 80px;
+	}
+	@include mobile{
+		margin-top: 50px;
+	}
+	&.one-service-page {
+		margin-top: 120px;
+		@include laptop{
+			margin-top: 80px;
+
+		}
+		@include mobile{
+			margin-top: 60px;
+		}
+	}
+	&-decor{
+		position:absolute;
+		z-index: -5;
+		width: 100vw;
+		height: 882px;
+		background: url('../img/services-decor.png');
+		background-size:cover;
+		@include laptop{
+			height: 790px ;
+		}
+		@include tablet{
+			height: 640px ;
+			width:1394px;
+			background-position: -150px;
+
+		}
+		@include mobile{
+			background-position: -15px;
+
+			height: 461px;
+			width: 1004px;
+		}
+	}
+	.title{
+
+		text-align: center;
+		margin-bottom: 79px;
+		@include mobile{
+			margin-bottom: 40px;
+		}
+	}
+	&-inner{
+		position:relative;
+		padding: 152px 53px 0 53px;
+		margin: 0 auto;
+		margin-bottom: 247px;
+		@include laptop{
+			padding: 95px 7px 0 7px; 
+			margin-bottom: 216px;
+		}
+		@include mobile{
+			margin-bottom: 82px;
+		}
+
+	}
+	.services-list{
+		position: relative;
+
+		&-item{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.img-wrapper{
+				width: 290px;
+				height: 290px;
+				border-radius:50%;
+				background-color: var(--accent5);
+				display: flex;
+				align-items:center;
+				justify-content: center;
+				margin-bottom: 20px;
+				@include mobile{
+					width: 215px;
+					height: 215px;
+				}
+				img{
+					width: 245px;
+					height: 152px;
+					@include mobile{
+						width: 181px;
+						height: 112px;
+					}
+				}	
+			}
+			.service-title{
+				max-width: 273px;
+				text-align: center;
+				font-family: var(--intro);
+				font-size: 20px;
+				line-height: 22px;
+				letter-spacing: -0.011em;
+				text-transform: uppercase;
+				color: var(--accent1);
+				@include mobile{
+					font-size: 18px;
+				}
+			}
+		}
+			
+	}
+	.service-navigation-block{
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			position: absolute;
+			z-index: 1;
+			top: 64%;
+			left: -5px;
+			@include mobile{
+				top: 59%;
+			}
+			.services-navigation-next,.services-navigation-prev{
+				cursor: pointer;
+				position:relative;
+				width: 18px;
+				height: 30px;
+				&:after{
+					position:absolute;
+					content: "";
+					width: 100%;
+					height: 100%;
+					background:url("../img/icons/arrow-green.svg");
+					background-size: cover;
+					background-repeat:no-repeat;
+				}
+
+
+			}
+			.services-navigation-next{
+				transform: rotateZ(180deg);
+			}
+		}
+}

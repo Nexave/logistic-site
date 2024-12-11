@@ -1,0 +1,388 @@
+.map-service {
+    padding-top: 50px;
+    margin-bottom: 120px;
+
+    @include laptop {
+        margin-bottom: 70px;
+    }
+
+    @include mobile {
+        padding-top: 0;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 80px;
+
+        @include blaptop {
+            margin-bottom: 0;
+        }
+    }
+
+    .map-service-inner {
+        position: relative;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+
+        @include blaptop {
+
+            padding: 0;
+            transform: scale(0.8);
+            margin-top: -50px;
+            margin-left: 80px;
+
+        }
+
+
+
+        @include laptop {
+            transform: scale(0.7);
+        }
+
+        @include ipad {
+            margin-left: 0;
+        }
+
+        @include tablet {
+            transform: scale(0.6);
+            margin-top: -100px;
+            margin-left: -100px;
+            margin-bottom: -100px;
+        }
+
+        @include mobile {
+            transform: scale(0.4);
+            margin-top: -180px;
+            margin-bottom: -195px;
+        }
+
+        @media (max-width: 544px) {
+            transform: scale(0.25);
+            margin-top: -250px;
+            margin-bottom: -250px;
+
+        }
+
+        .map-img {
+
+            width: 1126px;
+            height: 776px;
+
+
+            .city {
+                fill: var(--accent10);
+            }
+
+            .city.active {
+                fill: var(--accent2);
+            }
+        }
+
+        .city-list {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .city-link {
+            position: absolute;
+            font-size: 20px;
+            font-family: var(--opensans);
+            font-weight: 600;
+
+            color: white;
+        }
+
+        .city-link {
+            &.chernihov {
+                top: 110px;
+                left: 560px;
+            }
+
+            &.sumy {
+                top: 120px;
+                left: 720px;
+            }
+
+            &.kharkiv {
+                top: 240px;
+                left: 850px;
+            }
+
+            &.luhansk {
+                top: 260px;
+                left: 1000px;
+            }
+
+            &.donetsk {
+                top: 400px;
+                left: 950px;
+            }
+
+            &.kyiv {
+                top: 220px;
+                left: 510px;
+            }
+
+            &.zhitomir {
+                top: 170px;
+                left: 350px;
+            }
+
+            &.lutsk {
+                top: 130px;
+                left: 160px;
+            }
+
+            &.rivne {
+                top: 120px;
+                left: 260px;
+            }
+
+            &.uzhorod {
+                top: 390px;
+                left: 30px;
+            }
+
+            &.chernivtsy {
+                top: 398px;
+                left: 168px;
+            }
+
+            &.ivano-frankovsk {
+                top: 340px;
+                left: 110px;
+                max-width: 111px;
+                text-align: center;
+            }
+
+            &.lviv {
+                top: 260px;
+                left: 80px;
+            }
+
+            &.ternopil {
+                top: 290px;
+                left: 160px;
+
+            }
+
+            &.khmelnitsky {
+                top: 270px;
+                left: 260px;
+            }
+
+            &.cherkasy {
+                top: 300px;
+                left: 530px;
+            }
+
+            &.vinnitsa {
+                top: 350px;
+                left: 350px;
+            }
+
+            &.poltava {
+                top: 250px;
+                left: 670px;
+            }
+
+            &.dnipro {
+                top: 370px;
+                left: 760px;
+            }
+
+            &.zaporizzia {
+                top: 490px;
+                left: 780px;
+            }
+
+            &.odessa {
+                top: 620px;
+                left: 440px;
+            }
+
+            &.kropivnitsky {
+                top: 360px;
+                left: 540px;
+            }
+
+            &.kherson {
+                top: 540px;
+                left: 690px;
+            }
+
+            &.mykolaiv {
+                top: 470px;
+                left: 570px;
+            }
+
+
+        }
+
+        .city-link.active {
+            display: block;
+            position: absolute;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 36px;
+                height: 50px;
+                background: url("../img/icons/marker-green.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 2;
+                top: -52px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+
+    .choices__inner {
+        height: 50px;
+        border: var(--accent8);
+        background-color: var(--accent8);
+        line-height: 35px;
+        padding-left: 15px;
+    }
+
+    .choices__list--single {
+        font-size: 18px;
+        padding: 0
+    }
+
+
+    // .choices[data-type*=select-one]:after{
+    //  border-color:red;
+    //  width:5px;
+    //  height: 5px;
+    //  background-color:red
+    // }
+    .choices[data-type*=select-one]:after {
+        content: '';
+        height: 8px;
+        width: 8px;
+
+        border-left: 2px solid #70A9A1;
+        border-bottom: 2px solid #70A9A1;
+        transform: rotateZ(-45deg);
+        border-radius: 2px;
+        position: absolute;
+        right: 21px;
+        top: 50%;
+        margin-top: -2.5px;
+        pointer-events: none;
+        transition: transform 0.3s ease-in;
+    }
+
+    .choices[data-type*=select-one].is-open:after {
+        transform: rotateZ(135deg);
+        margin-top: -7.5px;
+        transition: transform 0.3s ease-in;
+    }
+
+    .choices__list.choices__list--dropdown.is-active {
+        background: #F7FAFA
+    }
+
+    .choices__item--selectable {
+        font-size: 18px;
+    }
+
+
+
+}
+
+.form-control-cities-wrapper {
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.map-cities-wrapper {
+    position: relative;
+    display: none;
+
+    @include mobile {
+        display: block;
+    }
+
+    .map-cities-list {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: none;
+        font-weight: 550;
+
+        line-height: 30px;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .map-cities-item {
+        padding-left: 20px;
+        &:hover{
+            background-color:#EDF5F5;
+        }
+    }
+
+    .current-city {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border: 1px solid var(--accent8);
+        background-color: var(--accent8);
+        font-size: 16px;
+        line-height: 50px;
+        color: var(--accent3);
+        border-radius: 5px;
+        font-weight: 550;
+        padding-left: 20px;
+
+        &:after {
+            content: '';
+            height: 8px;
+            width: 8px;
+
+            border-left: 2px solid #70A9A1;
+            border-bottom: 2px solid #70A9A1;
+            transform: rotateZ(-45deg);
+            border-radius: 2px;
+            position: absolute;
+            right: 21px;
+            top: 50%;
+            margin-top: -2.5px;
+            pointer-events: none;
+            transition: transform 0.3s ease-in;
+
+        }
+
+    }
+}
+
+.map-cities-wrapper.active {
+
+    .map-cities-list {
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        width: 100%;
+        background-color: var(--accent8);
+        z-index: 5;
+
+
+    }
+
+    .current-city:after {
+        transform: rotateZ(135deg);
+        margin-top: -7.5px;
+        transition: transform 0.3s ease-in;
+    }
+
+}

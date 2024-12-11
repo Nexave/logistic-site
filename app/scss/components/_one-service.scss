@@ -1,0 +1,181 @@
+.one-service {
+    &__price {
+        margin-top: 150px;
+        @include laptop{
+            margin-top: 120px;
+        }
+        @include mobile{
+            margin-top: 80px;
+        }
+        .title {
+            margin-bottom: 80px;
+            @include laptop {
+                margin-bottom: 40px;
+            }
+            @include mobile {
+                margin-bottom: 20px;
+            }
+        }
+        &-inner {
+            .price {
+                &-block {
+                    margin-bottom: 50px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                &-header {
+                    display: flex;
+                    padding: 24px 45px;
+                    background-color: var(--accent4);
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    @include mobile {
+                        display: none;
+                    }
+                    &__name {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: var(--accent5);
+                        text-transform: uppercase;
+                        font-family: var(--intro);
+                        &:nth-child(1) {
+                            width: 70%;
+                            @include tablet {
+                                width: 60%;
+                            }
+                        }
+                        &:nth-child(2) {
+                            width: 30%;
+                            @include tablet {
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+                &-body {
+                    &__item {
+                        display: flex;
+                        padding: 30px 45px;
+                        background-color: var(--accent8);
+                        @include tablet {
+                            padding: 30px 20px;
+                            align-items: center;
+                        }
+                        @include mobile {
+                            flex-direction: column;
+                            padding: 0;
+                            background-color: unset;
+                        }
+                        &:nth-child(even) {
+                            background-color: var(--accent11);
+                            @include mobile {
+                                background-color: unset;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom-left-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                        }
+                        &-name {
+                            width: 70%;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: var(--accent3);
+                            padding-right: 50px;
+                            @include tablet {
+                                width: 60%;
+                            }
+                            @include mobile {
+                                width: 100%;
+                                padding-right: 0;
+                                padding: 20px;
+                                font-size: 16px;
+                                line-height: 18px;
+                                text-align: center;
+                                background-color: var(--accent11);
+                                &.first {
+                                    background-color: var(--accent4);
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                    color: var(--accent5);
+                                }
+                            }
+                        }
+                        &-price {
+                            width: 30%;
+                            color: #E07A5F;
+                            font-size: 18px;
+                            line-height: 30px;
+                            font-family: var(--intro);
+                            @include tablet {
+                                width: 40%;
+                            }
+                            @include mobile {
+                                width: 100%;
+                                text-align: center;
+                                background-color: var(--accent8);
+                                padding: 20px;
+                                font-size: 16px;
+                                &.last {
+                                    border-bottom-left-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                }
+                            }
+                        }
+                        &-feature {
+                            width: 30%;
+                            color: var(--accent1);
+                            font-family: var(--intro);
+                            font-size: 18px;
+                            line-height: 30px;
+                            @include tablet {
+                                width: 40%;
+                            }
+                            @include mobile {
+                                width: 100%;
+                                text-align: center;
+                                background-color: var(--accent8);
+                                padding: 20px;
+                                font-size: 16px;
+                                &.last {
+                                    border-bottom-left-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__parag {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 24px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &-wrap {
+            position: relative;
+            height: 470px;
+            padding-left: 55px;
+            .ps__rail-y {
+                left: 0;
+                right: auto;
+                opacity: 0.6;
+                background-color: var(--accent11);
+                width: 10px;
+                border-radius: 10px;
+            }
+            .ps__thumb-y {
+                background-color: var(--accent4);
+                width: 10px;
+                left: 0.5px;
+                &:hover {
+                    width: 10px;
+                }
+            }
+        }
+    }
+}

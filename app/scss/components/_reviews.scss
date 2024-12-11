@@ -1,0 +1,246 @@
+.reviews-block {
+    margin-top: 120px;
+    padding-top: 100px;
+    padding-bottom: 151px;
+    background-color: var(--accent11);
+    @include laptop {
+        padding-top: 70px;
+        margin-top: 70px;
+    }
+    @include mobile {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        margin-top: 0;
+    }
+    .title{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    &-inner {
+        position: relative;
+        padding-left: 110px;
+        padding-right: 110px;
+        @include laptop {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .review-list-item {
+            width: 1144px;
+
+
+            display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
+
+
+            .img-wrapper {
+                display: flex;
+                align-items: center;
+                // width: 335px;
+                // height: 335px;
+                // border: 1px solid var(--accent10);
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // border-radius: 50%;
+                // overflow: hidden;
+                // @include laptop {
+                //     width: 194px;
+                //     height: 194px;
+                // }
+                @include mobile {
+                    justify-content: center;
+                    margin-bottom: 25px;
+                }
+
+                img {
+                    width: 320px;
+                    height: 320px;
+                    border-radius: 50%;
+                    border: 1px solid var(--accent10);
+                    object-fit: cover;
+                    padding: 7px;
+                    @include laptop { 
+                        width: 190px;
+                        height: 190px; 
+                    }
+                    @include mobile {
+                        width: 290px;
+                        height: 290px;
+                    }
+                }
+            }
+
+            .review-card {
+                position: relative;
+                width: 730px;
+                min-height: 307px;
+                margin-left: 80px;
+                background-color: var(--accent5);
+                padding: 40px 50px;
+                border-radius: 15px;
+                @include laptop {
+                    padding: 20px 40px 30px;
+                    width: 100%;
+                    min-height: auto;
+                    margin-left: 70px;
+                }
+                @include mobile {
+                    margin-left: 0;
+                    padding: 40px 15px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    background-color: var(--accent5);
+                    left: -30px;
+                    top: 118px;
+                    transform: rotateZ(45deg);
+                    @include laptop {
+                        width: 40px;
+                        height: 40px;
+                        left: -17px;
+                        top: 42%;
+                    }
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
+                &-title {
+                    font-family: var(--intro);
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: var(--accent1);
+                    margin-bottom: 10px;
+                    @include laptop {
+                        margin-bottom: 20px;
+                    }
+                    @include mobile {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &-subtitle {
+                    font-family: var(--helvetica);
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: var(--accent9);
+                    margin-bottom: 25px;
+                    @include laptop {
+                        margin-bottom: 20px;
+                    }
+                    @include mobile {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &-text {
+                    font-family: var(--helvetica);
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: var(--accent3);
+                }
+
+                .stars-block {
+                    margin-top: 25px;
+                    max-width: 190px;
+                    display: flex;
+                    justify-content: space-between;
+                    @include laptop {
+                        margin-top: 10px;
+                        max-width: 170px;
+                    }
+                    @include mobile {
+                        margin-top: 20px;
+                    }
+
+                    .star {
+                        width: 30px;
+                        height: 30px;
+                        background: url('../img/icons/star.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    .title {
+        margin-bottom: 107px;
+        @include laptop {
+            margin-bottom: 40px;
+        }
+    }
+
+    .reviews-navigation-block {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        @include laptop {
+            top: unset;
+            bottom: -70px;
+            justify-content: flex-end;
+        }
+        @include mobile {
+            justify-content: center;
+        }
+
+        .reviews-navigation-prev,
+        .reviews-navigation-next {
+        	cursor: pointer;
+        	position:relative;
+            width: 48px;
+            height: 48px;
+            border-radius:50%;
+            border:2px solid var(--accent10);
+
+
+            &:after{
+            	position:absolute;
+            	content: "";
+            	width: 12px;
+            	height: 12px;
+            	border-radius:1px;
+            	border-left:3px solid var(--accent10);
+            	border-bottom: 3px solid var(--accent10);
+            	transform: rotateZ(45deg);
+            	top: 17px;
+    			left: 18px;
+            }
+        }
+
+        .reviews-navigation-next {
+        	transform: rotateZ(180deg);
+            @include laptop {
+                margin-left: 20px;
+            }
+           &:after{
+            top:14px;
+           }
+        }
+    }
+    .button-wrapper{
+    	margin-top: 30px;
+    	display: flex;
+    	justify-content: center;
+        @include laptop {
+            margin-top: 108px;
+        }
+        @include mobile {
+            margin-top: 95px;
+        }
+    }
+    
+}
